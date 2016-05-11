@@ -7,4 +7,9 @@ describe('App', () => {
     const component = renderComponent('App');
     expect(component).toContain('React simple starter');
   });
+  it('it has a comment title', () => {
+    console.log("Testing for comment title");
+    const component = renderComponent('App');
+    expect(component).toContain('Add a comment');
+  });
 });
