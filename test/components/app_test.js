@@ -4,11 +4,15 @@ import App from '../../src/components/app';
 describe('App' , () => {
   let component;
 
-  beforeEach(() => {
+  beforeEach( () => {
     component = renderComponent(App);
   });
 
   it('renders something', () => {
     expect(component).to.exist;
+  });
+
+  it('has the expected content', () => {
+    expect(component).to.contain('React simple starter');
   });
 });
