@@ -11,6 +11,7 @@ import reducers from '../src/reducers';
 
 global.document = jsdom.jsdom('<!doctype html><html><body></body></html>');
 global.window = global.document.defaultView;
+// require('fbjs/lib/ExecutionEnvironment').canUseDOM = true;
 const $ = _$(window);
 
 chaiJquery(chai, chai.util, $);
@@ -32,4 +33,7 @@ $.fn.simulate = function(eventName, value) {
   TestUtils.Simulate[eventName](this[0]);
 };
 
+$.fn.addComment = function(comment) {
+
+};
 export {renderComponent, expect};

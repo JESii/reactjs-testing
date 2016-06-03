@@ -1,13 +1,20 @@
 import React from 'react';
 import { Component } from 'react';
+import CommentBox from './comment_box';
+import CommentList from './comment_list';
 
 export default class App extends Component {
+  // console.log("entering App");
   render() {
     return (
-      <div>React simple starter
-        <div className="add-comment">
-          <span>Add a comment</span>
-          <textfield ref="addCommenet">Add Comment</textfield>
+      <div>
+        <h1>My comment application</h1>
+        <div className="app">
+          <CommentBox>
+          </CommentBox>
+          <hr />
+          <CommentList>
+          </CommentList>
         </div>
       </div>
     );
